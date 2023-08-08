@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 1 e 3</title>
+</head>
+<body>
+    <h1>Qual o objetivo de se usar javascript em aplicações Frontend?</h1>
+    <button>Clique aqui!!</button>
+
+    <script>
+        const botao= document.querySelector('button');
+        const texto= document.querySelector('h1');
+
+        botao.addEventListener('click',()=>{
+        texto.style.color='#1ABC9C';
+        texto.style.fontSize='35px';
+        texto.textContent="O objetivo principal de usar JavaScript em aplicações frontend é melhorar a interatividade e dinamismo das páginas web. Isso é alcançado através de recursos como manipulação do DOM, validação de formulários em tempo real, carregamento de conteúdo assíncrono, animações, comunicação com o servidor e integração de APIs.  Em resumo, o JavaScript torna as aplicações web mais envolventes, responsivas e personalizadas para os usuários."
+        });
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 4 e 5</title>
+</head>
+
+<body>
+
+    <img onclick="clicou()" src="https://disneybrnews.weebly.com/uploads/4/6/5/7/46572671/259832812.jpg?250" alt=""
+        style="border-radius:58% ;">
+
+    <h1 id="mensagem"></h1>
+
+    <h2>Qual é o seu sorvete favorito?</h2>
+
+
+    <input type="text">
+
+   
+    <script>
+
+        var mensagem = document.getElementById('mensagem');
+        var imagem = document.querySelector('img');
+        var input = document.querySelector('input');
+
+        // Opção 1
+        function clicou() {
+            mensagem.innerHTML = "Ohhh, para de me apertar!"
+
+        }
+
+        // Opção 2
+
+        imagem.onmouseenter = function () {
+            mensagem.innerText = "Eiii, para!! Está me fazendo cócegas!  Hahahaha"
+        }
+
+        // Opção 3
+
+        imagem.addEventListener('drag', () => {
+            mensagem.innerText = "Ei, onde está me levando??? Me deixe aqui, estranha !!"
+        });
+
+          // Opção 3.1
+
+          input.addEventListener('keyup', (evento) => {
+
+            console.log(evento);
+
+            var conteudoInput = input.value;
+
+            if(conteudoInput.length <= 3){
+                mensagem.innerText = "Preciso de mais detalhes";
+            }
+           
+               else if(conteudoInput == "flocos"){
+                    mensagem.innerText = "Ahh! Prefiro chocolate"
+                }
+               else if(conteudoInput == "chocolate"){
+                    mensagem.innerText = "Eu amo sorvete de chocolate!"
+                }
+
+                else{
+                    mensagem.innerText = "Ahh, eu esperava um sabor de sorvete..."
+                }
+           
+        });
+
+    </script>
+
+</body>
+
+</html>
+
